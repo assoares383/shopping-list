@@ -1,0 +1,30 @@
+.page-container {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.new-list-container {
+  width: 80%;
+}
+
+.new-list-container .card {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.new-list-container .card-action-area {
+  flex: 1;
+}
+
+.new-list-container .card-content {
+  display: flex;
+  justify-content: center;
+}
+
+.new-list-container .card-content p {
+  font-weight: 700;
+  font-size: 1.6rem;
+}
