@@ -1,3 +1,8 @@
-.title {
+.header {
   padding: 0 20px;
+}
+
+.title {
+  font-size: 22px;
+  font-weight: 700;
 }

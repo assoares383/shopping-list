@@ -1,0 +1,49 @@
+.new-list-container .card {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.new-list-container .card-action-area {
+  flex: 1;
+}
+
+.new-list-container .card-content {
+  display: flex;
+  justify-content: center;
+}
+
+.new-list-container .card-content p {
+  font-weight: 700;
+  font-size: 1.6rem;
+}
+
+.list-container .list-card-body {
+  width: 100%;
+  text-align: center;
+  font-weight: 400;
+}
+
+.list-container .list-card-item {
+  display: flex;
+  align-items: center;
+  font-size: 13.5px;
+}
+
+.list-container .list-card-item svg {
+  margin-right: 10px;
+}
+
+.card-footer {
+  height: 40px;
+}
+
+.card-footer .list-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex: 1;
+  font-size: 12px;
+  font-weight: 700;
+  color: #757575;
+}
