@@ -1,3 +1,4 @@
+import PropTypes from "prop-types";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const ListCardItem = (props) => {
@@ -9,6 +10,11 @@ const ListCardItem = (props) => {
       </div>
     </>
   );
+};
+
+ListCardItem.propTypes = {
+  icon: PropTypes.object.isRequired,
+  text: PropTypes.object.isRequired,
 };
 
 export default ListCardItem;
