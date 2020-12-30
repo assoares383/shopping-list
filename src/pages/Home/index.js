@@ -17,7 +17,7 @@ const Home = (props) => (
 
 const mapStateToProps = (state) => ({
   list: state.list,
-  total: getListTotal(),
+  total: getListTotal(state),
 });
 
 export default connect(mapStateToProps, null)(Home);

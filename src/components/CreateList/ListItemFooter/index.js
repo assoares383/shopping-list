@@ -5,9 +5,14 @@ const ListItemFooter = (props) => (
   <div className="list-card-footer">
     <div className="list-card-footer-actions">
       <FontAwesomeIcon icon={faPen} color="#00b0ff" size="1x" />
-      <FontAwesomeIcon icon={faTrash} color="#e91e63" size="1x" />
+      <FontAwesomeIcon
+        onClick={() => props.deleteProduct(props.item.id)}
+        icon={faTrash}
+        color="#e91e63"
+        size="1x"
+      />
     </div>
-    <p>Total: R$ {props.total}</p>
+    <p>Total: R$ {props.item.total}</p>
   </div>
 );
 
