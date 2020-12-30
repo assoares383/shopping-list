@@ -10,6 +10,7 @@
 
 .new-list-container .card-content {
   display: flex;
+  flex-direction: column;
   justify-content: center;
 }
 
