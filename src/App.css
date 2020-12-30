@@ -6,3 +6,9 @@
   font-size: 22px;
   font-weight: 700;
 }
+
+a,
+a:hover {
+  text-decoration: none;
+  color: inherit;
+}

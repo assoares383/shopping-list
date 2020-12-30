@@ -6,7 +6,11 @@ import ListFooter from "../ListFooter";
 
 const List = () => {
   return (
-    <CustomCard containerClass="list-container" footer={<ListFooter />}>
+    <CustomCard
+      containerClass="list-container"
+      link="/lista"
+      footer={<ListFooter />}
+    >
       <div>
         <p className="title">Mês</p>
         <div className="list-card-body">
