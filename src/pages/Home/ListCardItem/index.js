@@ -14,7 +14,7 @@ const ListCardItem = (props) => {
 
 ListCardItem.propTypes = {
   icon: PropTypes.object.isRequired,
-  text: PropTypes.object.isRequired,
+  text: PropTypes.string.isRequired,
 };
 
 export default ListCardItem;
