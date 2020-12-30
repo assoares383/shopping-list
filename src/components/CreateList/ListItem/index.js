@@ -4,18 +4,25 @@ import Typography from "@material-ui/core/Typography";
 import CustomCard from "../../CustomCard";
 import ListItemFooter from "../ListItemFooter";
 
-const ListItem = () => {
+const ListItem = ({ item }) => {
   return (
-    <CustomCard link="#" containerClass="list-item" footer={<ListItemFooter />}>
+    <CustomCard
+      link="#"
+      image=""
+      containerClass="list-item"
+      footer={<ListItemFooter total={item.total} />}
+    >
       <div>
         <div className="list-item-header">
           <Typography variant="subtitle1" component="h2">
-            Café
+            {item.product}
           </Typography>
           <Checkbox />
         </div>
-        <Typography component="p">1 unidade</Typography>
-        <Typography component="p">R$ 10.00</Typography>
+        <Typography component="p">
+          {item.quantity} {item.unit}
+        </Typography>
+        <Typography component="p">R$ {item.price}</Typography>
       </div>
     </CustomCard>
   );
