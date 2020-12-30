@@ -1,16 +1,36 @@
+import React, { Component } from "react";
+import { connect } from "react-redux";
+import { bindActionCreators } from "redux";
+
 import Form from "./Form";
 import ListItem from "./ListItem";
+import { Creators as ListAction } from "../../store/actions/List";
 
 import "./styles.css";
 
-const CreateList = () => (
-  <div className="page-container">
-    <Form />
+class CreateList extends Component {
+  addProduct = (product, list) => {
+    this.props.addProduct(product, list);
+  };
 
-    <div className="list-items-container">
-      <ListItem />
-    </div>
-  </div>
-);
+  render() {
+    return (
+      <div className="page-container">
+        <Form addProduct={this.addProduct} />
 
-export default CreateList;
+        <div className="list-items-container">
+          <ListItem />
+        </div>
+      </div>
+    );
+  }
+}
+
+const mapsStateToProps = (state) => ({
+  list: state.list,
+});
+
+const mapDispatchToProps = (dispatch) =>
+  bindActionCreators(ListAction, dispatch);
+
+export default connect(mapsStateToProps, mapDispatchToProps)(CreateList);
