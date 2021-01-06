@@ -8,7 +8,7 @@ import { bindActionCreators } from "redux";
 
 import { Creators as FormActions } from "../../../store/actions/Form";
 
-const units = ["Kilos", "Litros", "Unidades"];
+const units = ["Quilos", "Litros", "Unidades"];
 
 class Form extends Component {
   state = {
@@ -69,6 +69,7 @@ class Form extends Component {
       list
     );
     this.clearState();
+    this.props.finishUpdate();
   };
 
   clearState = () => {
