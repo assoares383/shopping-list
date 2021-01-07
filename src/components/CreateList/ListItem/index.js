@@ -4,13 +4,15 @@ import Typography from "@material-ui/core/Typography";
 import CustomCard from "../../CustomCard";
 import ListItemFooter from "../ListItemFooter";
 
-const ListItem = ({ item, deleteProduct, toggleProduct }) => {
+const ListItem = ({ item, deleteProduct, toggleProduct, list }) => {
   return (
     <CustomCard
       link="#"
       image=""
       containerClass="list-item"
-      footer={<ListItemFooter deleteProduct={deleteProduct} item={item} />}
+      footer={
+        <ListItemFooter list={list} deleteProduct={deleteProduct} item={item} />
+      }
       action={() => toggleProduct(item.id)}
     >
       <div>
