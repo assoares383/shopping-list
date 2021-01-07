@@ -11,16 +11,14 @@ const ListItem = ({ item, deleteProduct, toggleProduct }) => {
       image=""
       containerClass="list-item"
       footer={<ListItemFooter deleteProduct={deleteProduct} item={item} />}
+      action={() => toggleProduct(item.id)}
     >
       <div>
         <div className="list-item-header">
           <Typography variant="subtitle1" component="h2">
             {item.product}
           </Typography>
-          <Checkbox
-            onClick={() => toggleProduct(item.id)}
-            checked={item.checked}
-          />
+          <Checkbox checked={item.checked} />
         </div>
         <Typography component="p">
           {item.quantity} {item.unit}

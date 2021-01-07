@@ -19,6 +19,7 @@ class CreateList extends Component {
         <Form
           addProduct={this.addProduct}
           updateProduct={this.props.updateProduct}
+          url={this.props.match.params.action}
         />
 
         <div className="list-items-container">
